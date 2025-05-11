@@ -1,7 +1,12 @@
 // fetch ou Axios
+import "dotenv/config";
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const { NODE_ENV } = process.env;
+const URL = NODE_ENV === "development" ? "http://localhost:3001/api" : "/api";
+
+// const URL = "http://localhost:3001";
+// const URL = "https://deploy-jornada-full-stack.onrender.com/api";
 
 const responseArtists = await axios.get(`${URL}/artists`);
 const responseSongs = await axios.get(`${URL}/songs`);
