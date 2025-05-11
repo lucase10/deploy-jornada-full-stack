@@ -1,4 +1,4 @@
-import path from "path";
+// import path from "path";
 
-const __dirname = path.resolve();
-console.log(__dirname);
+// const __dirname = path.resolve();
+// console.log(__dirname);
